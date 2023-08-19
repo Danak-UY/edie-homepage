@@ -1,0 +1,62 @@
+---
+interface Props {
+	label?: string;
+	href: string;
+}
+
+const { href, label } = Astro.props;
+---
+
+<a href={href}>
+	<slot>
+		{label}
+	</slot>
+</a>
+
+<style lang="scss">
+	a {
+		text-decoration: none;
+		color: var(--primary-text-color);
+		font-size: var(--fs-4);
+		font-weight: var(--weight-medium);
+		padding: var(--space-2);
+		position: relative;
+
+		&:hover {
+			color: var(--hover-text-color);
+
+			&:before {
+				width: 100%;	
+				transition: width ease 300ms;
+			}
+
+			&:after {
+				width: 100%;
+				transition-timing-function: step-end;
+			}
+		}
+
+		&:before {
+			content: "";
+			display: block;
+			position: absolute;
+			left: 0;
+			bottom: 0;
+			width: 0%;
+			height: 3px;
+			background-color: var(--primary-text-color);
+		}
+
+		&:after {
+			content: "";
+			display: block;
+			position: absolute;
+			right: 0;
+			bottom: 0;
+			width: 0%;
+			height: 3px;
+			background-color: var(--primary-text-color);
+			transition: width ease 300ms;
+		}
+	}
+</style>

@@ -11,12 +11,12 @@ const { title, overTitle, overType = 'primary', class: className } = Astro.props
 
 <div class={className}>
     {overTitle && <p class:list={[{[overType]: true}]}>{overTitle}</p>}
-    <h1>{title}</h1>
+    <h3>{title}</h3>
 </div>
 
 <style lang="scss">
-h1 {
-    font-size: var(--fs-1);
+h3 {
+    font-size: var(--fs-2);
     font-weight: var(--weight-medium);
 }
 

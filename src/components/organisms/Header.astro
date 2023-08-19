@@ -1,9 +1,30 @@
 ---
-import Navbar from "../components/molecules/Navbar.astro";
+import Navbar from "../molecules/Navbar.astro";
 ---
 
-<div class="container">
-   <header>
+<header>
+    <div class="container">
+        <a href="/" class="logo">Edie</a>
+        <Navbar />
+    </div>
+</header>
 
-   </header>
-</div>
+<style lang="scss">
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    text-decoration: none;
+    font-family: var(--title-font);
+    font-weight: var(--weight-extra-bold);
+    font-size: var(--fs-2);
+    color: var(--primary-text-color);
+
+    &:hover {
+        color: var(--hover-text-color);
+    }
+}
+</style>

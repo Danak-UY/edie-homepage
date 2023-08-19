@@ -1,0 +1,28 @@
+---
+interface Props {
+	subTitle: string;
+	content: string;
+    class?: string;
+}
+
+const { subTitle,  content, class: className } = Astro.props;
+---
+
+<div class={className}>
+    <h2>{subTitle}</h2>
+    <p>{content}</p>
+    <slot />
+</div>
+
+<style lang="scss">
+h2 {
+    font-size: var(--fs-1);
+    font-weight: var(--weight-medium);
+}
+
+p {
+    color: var(--secondary-text-color);
+    font-size: var(--fs-4);
+    font-weight: var(--weight-regular);
+}
+</style>

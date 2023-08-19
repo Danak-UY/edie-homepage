@@ -1,0 +1,50 @@
+---
+import Title from "../atoms/Title.astro";
+import SubTitle from "../atoms/SubTitle.astro";
+import Picture from "../atoms/Picture.astro";
+
+import { highlight } from "../../content/types";
+
+interface Props {
+    id: string;
+    title: string;
+    overTitle: string;
+    overType: string;
+    banner: string;
+    mobileBanner: string;
+    subTitle: string;
+    content: string;
+}
+
+const { id, title, overTitle, overType = highlight.primary, banner, subTitle, content } = Astro.props;
+---
+
+<div {id} class="inner">
+    <Title class="main-title" {title} {overTitle} {overType} />
+    <Picture class="main-banner" url={banner} />
+    <SubTitle class="main-subtitle" {subTitle} {content} />
+</div>
+
+
+<style>
+    .inner {
+        margin-top: var(--space-7);
+    }
+
+    .main-title {
+        max-width: 540px;
+        margin-left: 20%;
+        margin-bottom: 2.5rem;
+    }
+
+    .main-banner {
+        aspect-ratio: 1332 / 354;
+    }
+
+    .main-subtitle {
+        max-width: 400px;
+        margin-left: 20%;
+        margin-top: 2.5rem;
+        margin-bottom: 2.5rem;
+    }
+</style>

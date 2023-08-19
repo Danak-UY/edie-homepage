@@ -4,13 +4,43 @@ import HomeBanner from "../components/organisms/HomeBanner.astro";
 import Services from "../components/organisms/Services.astro";
 import Projects from "../components/organisms/Projects.astro";
 import Clients from "../components/organisms/Clients.astro";
+
+import { highlight, sections } from '../content/types';
 ---
 
 <Layout title="Edie Homepage - Dev Challenges">
-  <HomeBanner />
-  <Services />
-  <Projects />
-  <Clients />
+  <div class="container">
+    <HomeBanner
+      id={sections.home}
+      title="We create beautiful and fast web services"
+      overTitle="Unhappy with your website?"
+      overType={highlight.primary}
+
+      banner="/banners/hero.webp"
+      mobileBanner="/banners/hero-full.webp"
+
+      subTitle="Story, emotion and purpose"
+      content="We help transform your ideas into real world applications that will outperform your toughest competition and help you achieve your strategic goals in short period of time."
+    />
+    
+    <Services 
+      id={sections.services}
+      title="We offer high demand serivces"
+    />
+
+    <Projects
+      id={sections.projects}
+      title="Good design means good business"
+     />
+
+    <Clients
+      id={sections.clients}
+      overTitle="Meet the team"
+      overType={highlight.secondary}
+      title="We are chilled an a laidback team"
+      content="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+    />
+  </div>
 </Layout>
 
 <style></style>

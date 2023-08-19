@@ -1,0 +1,86 @@
+:root {
+    /* Fonts */
+    --main-font: "Poppins", sans-serif;
+    --title-font: "Heebo", sans-serif;
+
+    /* Font weights */
+    --weight-light: 300;
+    --weight-regular: 400;
+    --weight-medium: 500;
+    --weight-semi-bold: 600;
+    --weight-bold: 700;
+    --weight-extra-bold: 700;
+
+    /* Font sizes */
+    --fs-1: 3rem;
+    --fs-2: 2.25rem;
+    --fs-3: 1.5rem;
+    --fs-4: 1.25rem;
+    --fs-5: 1rem;
+    --fs-6: 0.875rem;
+    --fs-7: 0.75rem;
+
+    /* Spacing */
+    --space-1: 0.25rem;
+    --space-2: 0.5rem;
+    --space-3: 1rem;
+    --space-4: 2rem;
+    --space-5: 3rem;
+    --space-6: 4rem;
+    --space-7: 6rem;
+    --space-8: 8rem;
+
+    /* Breakpoints */
+    --breakpoint-xs: 0;
+    --breakpoint-sm: 576px;
+    --breakpoint-md: 768px;
+    --breakpoint-lg: 992px;
+    --breakpoint-xl: 1200px;
+
+    /* Colors */
+    --light: #fff;
+    --light-rgb: 255, 255, 255;
+    --dark: #000;
+    --dark-rgb: 0, 0, 0;
+
+    --gray-100: #f2f2f2;
+    --gray-100-rgb: 242, 242, 242;
+    --gray-300: #bdbdbd;
+    --gray-300-rgb: 189, 189, 189;
+    --gray-500: #828282;
+    --gray-500-rgb: 130, 130, 130;
+    --gray-700: #4f4f4f;
+    --gray-700-rgb: 79, 79, 79;
+    --gray-800: #333333;
+    --gray-800-rgb: 51, 51, 51;
+    --gray-900: #100e1d;
+    --gray-900-rgb: 16, 14, 29;
+
+    --red-500: #eb5757;
+    --red-500-rgb: 235, 87, 87;
+    --yellow-500: #f2c94e;
+    --yellow-500-rgb: 242, 201, 78;
+    --sky-blue-500: #2d9cdb;
+    --sky-blue-500-rgb: 45, 156, 219;
+    --green-500: #27ae60;
+    --green-500-rgb: 39, 174, 96;
+
+    /* Theme */
+    --primary-color: var(--sky-blue-500);
+    --primary-color-rgb: rgb(var(--sky-blue-500-rgb));
+    --secondary-color: var(--red-500);
+    --secondary-color-rgb: rgb(var(--red-500-rgb));
+    --tertiary-color: var(--green-500);
+    --tertiary-color-rgb: rgb(var(--green-500-rgb));
+
+    --primary-text-color: var(--gray-800);
+    --primary-text-color-rgb: rgb(var(--gray-800-rgb));
+    --secondary-text-color: var(--gray-700);
+    --secondary-text-color-rgb: rgb(var(--gray-700-rgb));
+    --accent-text-color: var(--primary-color);
+    --accent-text-color-rgb: rgb(var(--primary-color-rgb));
+    --secondary-accent-text-color: var(--secondary-color);
+    --secondary-accent-text-color-rgb: rgb(var(--secondary-color-rgb));
+    --hover-text-color: var(--gray-900);
+    --hover-text-color-rgb: rgb(var(--gray-900-rgb));
+}

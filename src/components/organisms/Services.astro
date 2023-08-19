@@ -1,0 +1,40 @@
+---
+import SectionTitle from "../atoms/SectionTitle.astro";
+
+import { highlight } from "../../content/types";
+
+interface Props {
+    id: string;
+    title: string;
+}
+
+const { id, title } = Astro.props;
+---
+
+<div {id} class="inner">
+    <SectionTitle class="section-title" {title} />
+</div>
+
+
+<style>
+    .inner {
+        margin-top: var(--space-7);
+    }
+
+    .section-title {
+        max-width: 360px;
+        margin-bottom: 2.5rem;
+    }
+
+    .main-banner {
+        aspect-ratio: 1332 / 354;
+    }
+
+    .main-subtitle {
+        width: 30%;
+        min-width: 360px;
+        margin-left: 20%;
+        margin-top: 2.5rem;
+        margin-bottom: 2.5rem;
+    }
+</style>
